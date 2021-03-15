@@ -1,0 +1,333 @@
+@font-face {
+  font-family: 'Audiowide-Regular';
+  src: url(../fonts/Audiowide-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Monoton-Regular';
+  src: url(../fonts/Monoton-Regular.ttf);
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: darkcyan;
+}
+
+body nav {
+  background-color: white;
+  text-align: center;
+  width: 105px;
+  border-radius: 50px;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid white;
+  -webkit-box-shadow: 0 0 20px white;
+          box-shadow: 0 0 20px white;
+  margin-top: 3%;
+  margin-left: 3%;
+  position: fixed;
+}
+
+body nav img {
+  width: 60%;
+  margin-bottom: 10%;
+}
+
+body nav img:hover {
+  -webkit-box-shadow: 0 0 20px cyan;
+          box-shadow: 0 0 20px cyan;
+  border-radius: 50px;
+  background-color: cyan;
+}
+
+body nav .nav_maison {
+  margin-top: 10%;
+}
+
+body nav .nav_main, body nav .nav_social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body nav .nav_main a {
+  text-decoration: none;
+  color: silver;
+  padding: 10% 2% 10% 2%;
+  font-size: medium;
+  font-family: 'Audiowide-Regular';
+  border: 1px solid white;
+}
+
+body nav .nav_main .nav_bouton:hover {
+  color: goldenrod;
+  border: 1px solid goldenrod;
+}
+
+@media screen and (max-width: 1150px) {
+  body nav {
+    height: auto;
+  }
+  body nav .gonewhensmall {
+    display: none;
+  }
+}
+
+body nav .hidewhenbig, body nav .showwhensmall {
+  display: none;
+}
+
+@media screen and (max-width: 1150px) {
+  body nav .showwhensmall {
+    display: block;
+    margin: auto;
+  }
+  body nav .nav_mobile:hover .hidewhenbig {
+    display: block;
+  }
+}
+
+body main {
+  margin: auto auto auto 15%;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 1150px) {
+  body main {
+    margin: 1% 1% auto 1%;
+    text-align: center;
+  }
+}
+
+body main h1, body main h3 {
+  font-family: 'Monoton-Regular';
+  font-weight: normal;
+  color: goldenrod;
+}
+
+body main h2 {
+  font-family: 'Audiowide-Regular';
+  color: silver;
+}
+
+@media screen and (max-width: 1150px) {
+  body main .index_h2_small {
+    margin-top: 90px;
+  }
+}
+
+body main h3 {
+  font-size: xx-large;
+}
+
+body main h4 {
+  font-family: 'Audiowide-Regular';
+  color: silver;
+  font-size: x-large;
+  background-color: white;
+  -webkit-box-shadow: 0 0 20px white;
+          box-shadow: 0 0 20px white;
+  border-radius: 10px;
+  padding-left: 20px;
+  margin-right: 2%;
+}
+
+@media screen and (max-width: 1150px) {
+  body main h1, body main h3, body main h3 {
+    margin-top: 100px;
+  }
+}
+
+body main .index_list {
+  font-family: 'Audiowide-Regular';
+  list-style-type: none;
+  padding: 0;
+}
+
+body main form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: 'Audiowide-Regular';
+  color: silver;
+  font-size: large;
+}
+
+@media screen and (max-width: 1150px) {
+  body main form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+body main form fieldset {
+  border: 1px solid silver;
+}
+
+body main form fieldset:hover, body main form .contact_envoi:hover {
+  border: 1px solid white;
+  color: goldenrod;
+  -webkit-box-shadow: 0 0 20px white;
+          box-shadow: 0 0 20px white;
+}
+
+body main form .contact_envoi {
+  padding: 1%;
+  background-color: white;
+  border: 1px solid silver;
+  color: silver;
+  font-family: 'Audiowide-Regular';
+  font-size: large;
+}
+
+body main .contact_email {
+  font-family: 'Audiowide-Regular';
+  color: silver;
+}
+
+@media screen and (max-width: 1150px) {
+  body main .contact_email {
+    margin-bottom: 270px;
+  }
+}
+
+body main .contact_email:hover {
+  color: goldenrod;
+}
+
+body main .portfolio_title {
+  margin-bottom: 10px;
+}
+
+body main .portfolio_des {
+  margin-top: 0;
+}
+
+body main .portfolio_see img {
+  border-radius: 10px;
+  border: 1px solid white;
+  -webkit-box-shadow: 0 0 40px white;
+          box-shadow: 0 0 40px white;
+}
+
+body main .portfolio_see img:hover {
+  opacity: 0.7;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media screen and (max-width: 1150px) {
+  body main .portfolio_see {
+    margin-bottom: 270px;
+  }
+  body main .portfolio_see img {
+    border: 2px solid white;
+    -webkit-box-shadow: 0 0 40px silver;
+            box-shadow: 0 0 40px silver;
+    width: 300px;
+  }
+}
+
+body main .about_cv {
+  font-family: 'Audiowide-Regular';
+  border-radius: 10px;
+  background-color: white;
+  color: silver;
+  margin-top: 10px;
+  text-decoration: none;
+  padding: 10px;
+}
+
+body main .about_cv:hover {
+  -webkit-box-shadow: 0 0 20px white;
+          box-shadow: 0 0 20px white;
+  border: 1px solid white;
+  color: goldenrod;
+}
+
+body main .main_about_experiences {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media screen and (max-width: 1150px) {
+  body main .main_about_experiences {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 270px;
+  }
+}
+
+body main .main_about_box {
+  border: 1px solid silver;
+  font-family: 'Audiowide-Regular';
+  text-align: center;
+  color: goldenrod;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid white;
+  -webkit-box-shadow: 0 0 20px white;
+          box-shadow: 0 0 20px white;
+}
+
+body main .about_text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+}
+
+@media screen and (max-width: 1150px) {
+  body main .about_text {
+    font-size: large;
+  }
+}
+
+body .main_about_special {
+  margin-right: 5%;
+}
+
+.box_margin {
+  margin-bottom: 5%;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,315 @@
+//FONTS
+@font-face {
+    font-family: 'Audiowide-Regular';
+    src: url(../fonts/Audiowide-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Monoton-Regular';
+    src: url(../fonts/Monoton-Regular.ttf);
+}
+
+//MIXINS
+@mixin bouton_nav {
+    color: $gold;
+    border: 1px solid $gold;
+}
+
+//TAILLE MEDIA QUERIES
+$smaller : 1150px;
+
+//COULEURS
+$gold: goldenrod;
+$silver: silver;
+
+//CSS
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: darkcyan;
+
+//BARRE DE NAVIGATION    
+    nav {
+        background-color: white;
+        text-align: center;
+        width: 105px;        
+        border-radius: 50px;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid white;
+        box-shadow: 0 0 20px white;
+        margin-top: 3%;
+        margin-left: 3%;
+        position: fixed;
+
+        img {
+            width: 60%;
+            margin-bottom: 10%;
+        }
+
+        img:hover {
+            box-shadow: 0 0 20px cyan;
+            border-radius: 50px;
+            background-color: cyan;
+        }
+
+        .nav_maison {
+            margin-top: 10%;
+        }
+            
+        .nav_main, .nav_social {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav_main {
+                
+            a {
+                text-decoration: none;
+                color: silver;
+                padding: 10% 2% 10% 2%;
+                font-size: medium;
+                font-family: 'Audiowide-Regular';
+                border: 1px solid white;
+            }
+
+            .nav_bouton:hover {
+                @include bouton_nav();
+            }          
+        }
+
+        @media screen and (max-width: $smaller) {
+            .gonewhensmall {
+                display: none;
+            }
+            
+            height: auto;
+        }
+
+        .hidewhenbig, .showwhensmall, {
+            display: none;
+        }
+
+        @media screen and (max-width: $smaller) {
+
+            .showwhensmall {
+                display: block;
+                margin:auto;
+            }
+
+            .nav_mobile:hover .hidewhenbig {
+                display: block;
+            }
+        }
+    }
+
+//MAIN
+    main {
+        margin: auto auto auto 15%;
+        width: 100%;
+        height: auto;  
+        
+        @media screen and (max-width: $smaller) {
+            margin: 1% 1% auto 1%;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Monoton-Regular';
+            font-weight: normal;
+            color: $gold; 
+        }
+
+        h2 {
+            font-family: 'Audiowide-Regular';
+            color: $silver;
+        }
+
+        .index_h2_small {
+            @media screen and (max-width: $smaller) {
+                margin-top: 90px;
+            }
+        }
+            
+        h3 {
+            @extend h1;
+            font-size: xx-large;
+        }
+
+        h4 {
+            font-family: 'Audiowide-Regular';
+            color: $silver;
+            font-size: x-large;
+            background-color: white;
+            box-shadow: 0 0 20px white;
+            border-radius: 10px;
+            padding-left: 20px;
+            margin-right: 2%;
+        }
+
+        @media screen and (max-width: $smaller) {
+            h1, h3 {
+                margin-top: 100px;
+            }
+        }
+
+//INDEX
+        
+        .index_list {
+            font-family: 'Audiowide-Regular';
+            list-style-type: none;
+            padding: 0;
+        }
+
+//CONTACT
+        form {
+            display: flex;
+            flex-direction: row;
+            font-family: 'Audiowide-Regular';
+            color: $silver;
+            font-size: large;
+
+            @media screen and (max-width: $smaller) {
+                flex-direction: column;
+            }
+
+            fieldset {
+                border: 1px solid $silver;
+            }
+
+            fieldset:hover {
+                border: 1px solid white;
+                color: $gold;
+                box-shadow: 0 0 20px white;
+            }
+
+            .contact_envoi {
+                padding: 1%;
+                background-color: white;
+                border: 1px solid $silver;
+                color: $silver;
+                font-family: 'Audiowide-Regular';
+                font-size: large;
+            }
+
+            .contact_envoi:hover {
+                @extend fieldset:hover;
+            }
+        }
+
+        .contact_email {
+            font-family: 'Audiowide-Regular';
+            color: $silver;
+
+            @media screen and (max-width: $smaller) {
+                margin-bottom: 270px;
+            }
+        }
+
+        .contact_email:hover {
+            color: $gold;
+        }
+
+//PORTFOLIO
+        .portfolio_title {
+            margin-bottom: 10px;
+        }
+
+        .portfolio_des {
+            margin-top: 0;
+        }
+
+        .portfolio_see {
+
+            img {
+                border-radius: 10px;
+                border: 1px solid white;
+                box-shadow: 0 0 40px white;
+            }
+
+            img:hover {
+                opacity: 0.7;
+                box-shadow: none;
+            }
+
+            @media screen and (max-width: $smaller) {
+                margin-bottom: 270px;
+
+                img {
+                    border: 2px solid white;
+                    box-shadow: 0 0 40px $silver;
+                    width: 300px;
+                }
+            }
+        }
+
+//ABOUT
+
+        .about_cv {
+            font-family: 'Audiowide-Regular';
+            border-radius: 10px;
+            background-color: white;
+            color: $silver;
+            margin-top: 10px;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .about_cv:hover {
+            box-shadow: 0 0 20px white;
+            border: 1px solid white;
+            color: $gold;
+        }
+
+        .main_about_experiences {
+            display: flex;
+            flex-direction: row;
+
+            @media screen and (max-width: $smaller) {
+                flex-direction: column;
+                margin-bottom: 270px;
+            }
+        }
+
+        .main_about_box {
+            border: 1px solid silver;
+            font-family: 'Audiowide-Regular';
+            text-align: center;
+            color: $gold;
+            border-radius: 20px;
+            padding: 10px;
+            border: 1px solid white;
+            box-shadow: 0 0 20px white;
+        }
+
+        
+
+        .about_text {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+            
+            @media screen and (max-width: $smaller) {
+                font-size: large;
+            }
+        }
+    }
+
+    .main_about_special {
+        margin-right: 5%;
+    }
+}
+
+.box_margin {
+    margin-bottom: 5%;
+}

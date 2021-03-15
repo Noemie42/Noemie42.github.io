@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>ND - Front-End Web Developer</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    
+    <body>
+        <nav>
+            <div class="nav_mobile">
+                <a href="index.html" class="gonewhensmall"><img src="images/accueil.png" alt="" class="nav_maison"></a>
+                <img src="images/accueil.png" alt="" class="nav_maison showwhensmall">
+                <div class="hidewhenbig">
+                    <div class="nav_main">
+                        <a href="index.html" class="nav_bouton">Accueil</a>
+                        <a href="about.html" class="nav_bouton">Qui suis-je</a>
+                        <a href="skills.html" class="nav_bouton">Outils</a>
+                        <a href="portfolio.html" class="nav_bouton">Portfolio</a>
+                        <a href="contact.html" class="nav_bouton">Contact</a>
+                    </div>            
+                    <div class="nav_social">
+                        <a href="https://www.linkedin.com/in/noemie-darcillon/" target="_blank"><img src="images/linkedin.png" alt=""></a>
+                    </div> 
+                </div>
+            </div>            
+            <div class="nav_main gonewhensmall">
+                <a href="about.html" class="nav_bouton">Qui suis-je</a>
+                <a href="skills.html" class="nav_bouton">Outils</a>
+                <a href="portfolio.html" class="nav_bouton">Portfolio</a>
+                <a href="contact.html" class="nav_bouton" style="padding: 10% 2% 10% 2%; background-color: darkcyan; color: goldenrod; border: 1px solid goldenrod;">Contact</a>
+            </div>            
+            <div class="nav_social gonewhensmall">
+                <a href="https://www.linkedin.com/in/noemie-darcillon/" target="_blank"><img src="images/linkedin.png" alt=""></a>
+            </div>            
+        </nav> 
+        
+        <main>
+            <h3>Contact</h3>
+            <div class="contenu">
+                <form action="https://formspree.io/noemie.darcillon@gmail.com" method="POST">
+                    <fieldset>
+                        <label for="name">Nom :</label><br>
+                        <input type="text" name="name" id="name" required/><br>
+                        <br>
+                        <label for="firstname">Prénom :</label><br>
+                        <input type="text" name="firstname" id="firstname" required/><br>
+                        <br>
+                        <label for="email">Votre adresse mail :</label><br>
+                        <input  name = "_replyto" id="email" type="email" required/><br>            
+                    </fieldset>
+                    <fieldset>
+                        <label for="subject">Sujet du message :</label><br>
+                        <input type="text" name="subject" id="subject" required/><br>
+                        <br>
+                        <label for="message">Message :</label><br>
+                        <TEXTAREA name="message" type="text" id="message" rows="10" cols="40"></TEXTAREA>
+                        
+                    </fieldset>
+                    <input type="submit" value="Envoyer" class="contact_envoi"/>
+                </form>
+                <div>
+                    <p class="contact_email">Mon email : <span>noemie.darcillon@gmail.com</span></p>
+                </div>
+            </div>                
+        </main>
+
+    </body>
+</html>
